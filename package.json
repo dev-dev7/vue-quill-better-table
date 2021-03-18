@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "quill": "^2.0.0-dev.4",
+    "quill-better-table": "^1.2.10",
     "vue": "^3.0.0"
   },
   "devDependencies": {
