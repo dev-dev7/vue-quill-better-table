@@ -5,6 +5,7 @@
       </h3>
       <div class="btn-group">
         <button v-on:click="insertTable">Insert table</button>
+        <button v-on:click="getTable">Get table</button>
       </div>
     </div>
     <div id="editor"></div>
@@ -49,6 +50,9 @@ export default {
   methods: {
     insertTable: function () {
       this.editor.getModule('better-table').insertTable(3, 3);
+    },
+    getTable: function () {
+      console.log(this.editor.getModule('better-table').getTable());
     },
   },
 };
