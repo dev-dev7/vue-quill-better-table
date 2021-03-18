@@ -6,6 +6,7 @@
       <div class="btn-group">
         <button v-on:click="insertTable">Insert table</button>
         <button v-on:click="getTable">Get table</button>
+        <button v-on:click="getContents">Get contents</button>
       </div>
     </div>
     <div id="editor"></div>
@@ -53,6 +54,12 @@ export default {
     },
     getTable: function () {
       console.log(this.editor.getModule('better-table').getTable());
+    },
+    getContents: function () {
+      document.body.querySelector('#delta-view')
+        .innerHTML = JSON.stringify(
+          this.editor.getContents()
+        )
     },
   },
 };
